@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "R scripts for serum proteomic analysis in spinal and bulbar muscular atrophy"
+version: 1.0.0
+type: software
+license: MIT
+message: "Please cite this software using the citation information provided below."
+abstract: >
+  R scripts used for data processing, differential protein analysis,
+  clinical correlation analysis, PLS-DA, and figure generation in a
+  serum proteomic study of spinal and bulbar muscular atrophy.
+authors:
+  - family-names: "Kondo"
+    given-names: "Ayano"
+    affiliation: "Nagoya University Graduate School of Medicine" 
+　- family-names: "Iizuka"
+    given-names: "Masaki"
+    affiliation: "Nagoya University Graduate School of Medicine"
+keywords:
+  - spinal and bulbar muscular atrophy
+  - SBMA
+  - serum proteomics
+  - SomaScan
+  - R
