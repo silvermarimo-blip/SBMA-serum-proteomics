@@ -1,0 +1,23 @@
+
+install.packages("Hmisc")
+library(Hmisc)
+
+
+data <- read.csv("Book13.csv", header=TRUE, check.names=FALSE)
+
+
+data_matrix <- as.matrix(data[-1, ])
+data_matrix <- apply(data_matrix, 2, as.numeric)
+
+
+correlation <- rcorr(data_matrix)
+
+
+print(correlation$r)
+
+
+print(correlation$P)
+
+
+write.csv(correlation$r, "correlation_coefficients.csv")
+write.csv(correlation$P, "p_values.csv")
