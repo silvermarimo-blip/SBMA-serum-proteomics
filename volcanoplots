@@ -1,0 +1,20 @@
+
+library(ggplot2)
+library(dplyr)
+
+
+data <- read.csv("volcano.csv")
+
+
+ggplot(data, aes(x = log2FC, y = -log10(P_value))) +
+  geom_point(color = "gray", alpha = 0.5) +  # 条件を満たさないものは灰色の点で表示
+  geom_text(data = filtered_data, aes(label = ifelse((log2FC >= 1.2 & P_value <= 0.05) | (log2FC <= -1.2 & P_value <= 0.05), Gene_Symbol, "")), 
+            vjust = ifelse(filtered_data$log2FC > 0, 0, 1), 
+            hjust = ifelse(filtered_data$log2FC > 0, 0, 1),
+            size = 3, check_overlap = TRUE) +
+  geom_point(data = filtered_data, aes(color = ifelse(log2FC > 0, "red", "blue")), alpha = 0.5) +
+  scale_color_manual(values = c("red" = "red", "blue" = "blue")) +
+  theme_minimal() +
+  labs(x = "log2FC", y = "-log10(P_value)") +
+  geom_vline(xintercept = c(-1.2, 1.2), linetype = "dashed", color = "black") +
+  geom_hline(yintercept = -log10(0.05), linetype = "dashed", color = "black")
