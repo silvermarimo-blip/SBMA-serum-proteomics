@@ -2,20 +2,17 @@ cff-version: "1.2.0"
 message: "Please cite this software using the citation information provided below."
 title: "Python scripts for serum proteomic analysis in spinal and bulbar muscular atrophy"
 type: software
-version: "1.0.0"
-license: MIT
+version: "1.0.1"
+license: "MIT"
 
 authors:
   - family-names: "Kondo"
     given-names: "Ayano"
     affiliation: "Nagoya University Graduate School of Medicine"
 
-  - family-names: "Iizuka"
-    given-names: "Masaki"
-    affiliation: "Nagoya University Graduate School of Medicine"
-
 abstract: >
-  Python scripts
+  Python scripts used for serum proteomic analyses in spinal and
+  bulbar muscular atrophy.
 
 keywords:
   - spinal and bulbar muscular atrophy
